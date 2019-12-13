@@ -1,0 +1,24 @@
+4 Data :
+To find the best location for our sushi place, we will use the following sources of information:
+
+From Wikipedia (tables): • Locations: https://es.wikipedia.org/wiki/Anexo:Comunas_de_Chile_por_poblaci%C3%B3n • PostCodes- https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_postales_de_Chile
+
+From Files: Geo Location: https://raw.githubusercontent.com/ssikam/My-Capstone-Project/master/chile%20geo%20public.csv
+
+From Foursquare: Venues Categories: https://developer.foursquare.com/docs/resources/categories • Sushi - 4bf58dd8d48988d1d2941735 • Highschool - 4bf58dd8d48988d13d941735 • University - 4bf58dd8d48988d1ae941735 • Office - 4d4b7105d754a06375d81259
+
+5 Methodology:
+He collected different sources of information such as locations, zip codes, geographic locations to import all this data into a Jupyter notebook.
+
+The selection was based solely on the place of the restaurant or locations in Santiago, Chile, to filter the results that we use the "Metropolitan of Santiago" leaving a total of 52 locations, joined all bases, leaving a size of (52.4).
+
+Information about sushi restaurants, schools, universities and offices was sought for each location obtain this information from Foursquare.
+
+For each location we group and count each of the 4 categories, defined a weight for each category, depending on the recurrence you may have in our sushi restaurant, like:
+
+• Sushi restaurant: -1 points (the more restaurants there are in a sector, the less important it’s to us) 
+• Schools: 1 point (they are good clients, but it depends on the money their parents give them) 
+• Universities: 2 points (they are good clients and with more economic independence than the students) 
+• Offices: 3 points (they have their own income and could be frequent clients)
+
+For each location we calculate a final score and order the resulting data from highest to lowest. The place with the highest score will be where we will put our sushi restaurant
